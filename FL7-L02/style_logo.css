@@ -4,13 +4,17 @@ h1 {
     font-size: 72px;
 }
 
-h1::before { 
-    content: "<";
+.tag {
+    quotes: "<" ">";
+}
+
+.tag:before { 
+    content: open-quote;
     color: #39C2D7;
 }
 
-h1::after { 
-    content: ">";
+.tag:after { 
+    content: close-quote;
     color: #39C2D7;
 }
 

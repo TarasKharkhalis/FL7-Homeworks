@@ -1,3 +1,110 @@
-p{
+.item {
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	background: red;
+	margin-left: 20px;
+	margin-top: 20px;
+}
 
+.item:hover {
+	width: 300px;
+	height: 300px;
+	background: black;
+	opacity: 0.9;
+}
+
+.country {
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+	font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+	font-size: 24px;
+	font-weight: bold;
+	height: 76px;
+	width: 300px;
+	position: relative;
+	bottom: -224px;
+	display: inline-block;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: black;
+}
+
+#expand {
+	width: 0px;
+	height: 0px;
+	margin-left: 20px;
+	margin-top: 20px;
+	background: grey;
+	transition: width 1s, height 1s;
+	overflow: hidden;
+	
+}
+
+#expand:target {
+	display: block;
+	height: 500px;
+	width: 100%;
+	max-width: 1271px;
+	margin-left: 20px;
+	margin-top: 20px;
+	position: relative;
+}
+
+#austria {
+	background-image: url("https://i1.wallpaperscraft.com/image/innsbruck_austria_city_architecture_street_108065_300x300.jpg");
+}
+
+#bulgaria {
+	background-image: url("http://cdn.pinknews.co.uk/images/2012/06/sofiaCREDBobyDimitrov.jpg");
+}
+
+#netherlands {
+	background-image: url("http://www.ibbooking.com/UserFiles/pictures/8E616A66-8B29-A80A-4829-C9CE471BECB2.png?cache&q=90&w=1024");
+}
+
+#usa {
+	background-image: url("http://www.danielbowden.com.au/images/travel/NewYork-TopOfTheRockSkyline-th.jpg");
+}
+
+#poland {
+	background-image: url("https://lifesharelive.files.wordpress.com/2017/04/poland-2.jpg?w=300&h=300");
+}
+
+#finland {
+	background-image: url("https://www.finlandtours.fi/wp-content/uploads/2016/07/tallinna_vanhakaupunki1-300x300.jpg");
+}
+
+#spain {
+	background-image: url("https://static.wixstatic.com/media/9919a6_20bd4ecf27ec4f3295e48fbc29b3bac9~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_300,h_300/9919a6_20bd4ecf27ec4f3295e48fbc29b3bac9~mv2_d_4032_3024_s_4_2.jpg");
+}
+
+#ukraine {
+	background-image: url("http://prolineconsultancy.com/wp-content/uploads/2016/06/ukraine.jpg");
+}
+
+#latvia {
+	background-image: url("http://www.eeteurope.com/wp-content/uploads/2016/12/Riga-walking-tour-1-300x300.jpg");
+}
+
+#romania {
+	background-image: url("http://images4.fanpop.com/image/quiz/479000/479170_1285759197573_300_300.jpg");
+}
+
+#germany {
+	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/98/25/49/9825498944e2aa15865f297fab55f261.jpg");
+}
+
+#france {
+	background-image: url("http://wallpaperscraft.com/image/city_paris_france_tower_grass_sky_838_300x300.jpg");
 }
