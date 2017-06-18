@@ -1,0 +1,19 @@
+h1 {
+    color: #464547;
+    font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+    font-size: 72px;
+}
+
+h1::before { 
+    content: "<";
+    color: #39C2D7;
+}
+
+h1::after { 
+    content: ">";
+    color: #39C2D7;
+}
+
+.format {
+    transform: scaleY(1.8);
+}
