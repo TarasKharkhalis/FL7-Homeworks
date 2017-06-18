@@ -28,6 +28,28 @@
 	margin: 0;
 }
 
+.office {
+	font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+	margin: 15px 15px 0 20px;
+	font-size: 36px;
+	color: #39C2D7;
+	letter-spacing: -3px;
+}
+
+.address {
+	font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+	margin: 0 0 15px 0px;
+	font-size: 22px;
+
+}
+
+h2 {
+	font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+	margin: 0 0 15px 25px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
 a {
 	text-decoration: none;
 	color: #fff;
@@ -45,7 +67,7 @@ a {
 	height: 0px;
 	margin-left: 20px;
 	margin-top: 20px;
-	background: grey;
+	background: #D3D3D3;
 	transition: width 1s, height 1s;
 	overflow: hidden;
 	
