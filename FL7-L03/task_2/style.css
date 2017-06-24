@@ -1,0 +1,116 @@
+body {
+	font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	padding: 30px;
+}
+
+a [href="4"] {
+	margin-right: 20px;
+}
+
+li {
+	list-style-type: none;
+}
+
+.header {
+	display: flex;
+	flex-wrap:  wrap;
+}
+
+.hand-image {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 145px;
+	left: 70px;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	background: linear-gradient(to right, rgb(207,179,173) , rgb(161,231,239));
+	flex-basis: 100%;
+}
+
+header h1 {
+	padding: 80px 70px 25px 25px; 
+	font-size: 48px;
+}
+
+.about-us {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: auto;
+	justify-content: space-between;
+}
+
+.about-us h1{
+	margin: 0;
+	padding: 170px 0 25px 40px;
+	height: 100%;
+	flex-basis: 48%;
+	font-size: 45px;
+	justify-content: flex-end;
+}
+
+.first-info {
+	flex-basis: 48%;
+	height: 100%;
+	padding-top: 260px;
+	flex-direction: column;
+	justify-content:  flex-end;
+}
+
+.first-info h3 {
+	padding: 20px 0 30px 10px;
+	margin: 0;
+}
+
+.about-us p {
+	margin: 0;
+	font-size: 20px;
+	padding: 0px 0 30px 10px;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	flex-basis: 100%;
+	padding-right: 60px; 
+}
+
+.pointer {
+	padding: 50px;
+	font-size: 28px;
+}
+
+.pointer h3{
+	width: 500px;
+	height: auto;
+}
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.men {
+	width: 397px;
+	height: 295px;
+}
+
+.water {
+	position: relative;
+	width: 488px;
+	height: 689px;
+}
