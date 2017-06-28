@@ -1,1 +1,7 @@
-$(document).ready(function(){$("#owl-demo").owlCarousel({items:5})});
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+      items : 5
+  });
+ 
+});

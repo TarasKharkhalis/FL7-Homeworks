@@ -1,1 +1,46 @@
-$(document).ready(function(){var a=$(".poster"),t=$(".shine"),e=$('div[class*="layer-"]'),n=$(window).width(),r=$(window).height();$(window).on("mousemove",function(s){var o=.5-s.pageX/n,d=.5-s.pageY/r,g=s.pageY-r/2,i=s.pageX-n/2,c=180*Math.atan2(g,i)/Math.PI-90,f=a.data("offset"),p="translateY("+-o*f+"px) rotateX("+-d*f+"deg) rotateY("+o*(2*f)+"deg)";c<0&&(c+=360),t.css("background","linear-gradient("+c+"deg, rgba(255,255,255,"+s.pageY/r+") 0%,rgba(255,255,255,0) 80%)"),a.css("transform",p),e.each(function(){var a=$(this),t=3*a.data("offset")||0,e="translateX("+o*t+"px) translateY("+d*t+"px)";a.css("transform",e)})})});
+/** 
+ * Designed by @Konstantine Trundayev
+ * https://dribbble.com/k0t
+ * Coded by @Balaj Marius for @Designmodo
+ * http://mariusbalaj.com | http://designmodo.com
+ */
+$(document).ready(function() {
+
+  var $poster = $('.poster'),
+    $shine = $('.shine'),
+    $layer = $('div[class*="layer-"]'),
+    w = $(window).width(), //window width
+    h = $(window).height(); //window height
+
+  $(window).on('mousemove', function(e) {
+
+    var offsetX = 0.5 - e.pageX / w, //cursor position X
+      offsetY = 0.5 - e.pageY / h, //cursor position Y
+      dy = e.pageY - h / 2, //@h/2 = center of poster
+      dx = e.pageX - w / 2, //@w/2 = center of poster
+      theta = Math.atan2(dy, dx), //angle between cursor and center of poster in RAD
+      angle = theta * 180 / Math.PI - 90, //convert rad in degrees
+      offsetPoster = $poster.data('offset'),
+      transformPoster = 'translateY(' + -offsetX * offsetPoster + 'px) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)'; //poster transform
+    //get angle between 0-360
+    if (angle < 0) {
+      angle = angle + 360;
+    }
+
+    //gradient angle and opacity
+    $shine.css('background', 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + e.pageY / h + ') 0%,rgba(255,255,255,0) 80%)');
+
+    //poster transform
+    $poster.css('transform', transformPoster);
+
+    //parallax foreach layer
+    $layer.each(function() {
+      var $this = $(this),
+        offsetLayer = $this.data('offset') * 3 || 0,
+        transformLayer = 'translateX(' + offsetX * offsetLayer + 'px) translateY(' + offsetY * offsetLayer + 'px)';
+
+      $this.css('transform', transformLayer);
+    });
+
+  });
+});
