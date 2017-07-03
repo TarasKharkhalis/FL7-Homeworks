@@ -1,0 +1,77 @@
+$contentBackground: null !default;
+
+body {
+	background: $bodyBackground;
+	font: $bodyFont;
+	color: $bodyColor;
+}
+
+#content {
+  width: 960px;
+  margin: 0 auto;
+  background: $contentBackground;
+  padding: 20px;
+
+  h1 {
+  	font-weight: bold;
+  	color: $h1Color;
+  }
+
+  h2 {
+  	color: $h1Color;
+  }
+
+  a {
+  	color: $aColor;
+  }
+
+  .img-left {
+  	float: left;
+  	border: 2px solid $borderColor;
+  	margin: 5px 20px 20px 0;
+  }
+
+  .brief {
+  	background: $briefBackground;
+  	padding: 20px;
+  	margin: $briefMargin;
+  	float: $briefFloat;
+  	width: $briefWidth;
+  	font-style: italic;
+  	font-weight: bold;
+  }
+
+  .img-right {
+  	border: 2px solid $borderColor;
+  	float: right;
+  	margin: 0 0 20px 20px;
+  }
+
+  table {
+  	color: $captionColor;
+  	border-collapse: collapse;
+
+	caption {
+		text-align: right;
+		font-style: italic;
+		font-weight: bold;
+		
+	}
+
+  	th {
+  		background: $thBackground;
+		padding: 10px 20px;
+  		//height: 35px;
+  		vertical-align: middle;
+  		text-align: left;
+  	}
+
+  	td {
+  		background: $tdBackground;
+  		border-bottom: 1px solid $thBackground;
+  		//height: 35px;
+  		vertical-align: middle;
+  		padding: 10px 20px;
+  	}
+  }
+}
