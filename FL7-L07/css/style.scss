@@ -1,0 +1,52 @@
+$blue:   #2A74BF;
+$red:    #D7514C;
+$green:  #4D944B;
+$orange: #D8C11D;
+$grey:   #666;
+$white: #fff;
+
+
+.thumb {
+	padding: 2px;
+	margin: 5px 0;
+}
+.danger {
+	background: $red;
+	color: $white;
+}
+
+.warning {
+	background: $orange;
+	color: $white;
+}
+
+.success {
+	background: $green;
+	color: $white;
+}
+
+.h1, .h2 {
+	color: $blue;
+}
+
+hr {
+	border-color: $blue;
+}
+
+.caption {
+	margin: 5px 0;
+}
+
+.footer {
+	background: $grey;
+	color: $white;
+	margin-top: 40px;
+	padding: 10px;
+}
+
+.active {
+	display: inline-block;
+	background-color: $blue;
+	color: $white;
+
+}

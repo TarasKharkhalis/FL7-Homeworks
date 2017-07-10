@@ -1,0 +1,37 @@
+.thumb {
+  padding: 2px;
+  margin: 5px 0; }
+
+.danger {
+  background: #D7514C;
+  color: #fff; }
+
+.warning {
+  background: #D8C11D;
+  color: #fff; }
+
+.success {
+  background: #4D944B;
+  color: #fff; }
+
+.h1, .h2 {
+  color: #2A74BF; }
+
+hr {
+  border-color: #2A74BF; }
+
+.caption {
+  margin: 5px 0; }
+
+.footer {
+  background: #666;
+  color: #fff;
+  margin-top: 40px;
+  padding: 10px; }
+
+.active {
+  display: inline-block;
+  background-color: #2A74BF;
+  color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
