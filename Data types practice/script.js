@@ -1,3 +1,8 @@
+
+/* Due to multiple tasks had been done in one script.js file, 
+it is needed to comment different parts of the file. */
+
+
 /* Exercise 1 */
 
 var votes = ["angular","angular","react","react","react","angular","ember","react","vanilla"];
