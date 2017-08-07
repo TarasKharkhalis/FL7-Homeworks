@@ -1,33 +1,48 @@
-function Champion(obj) {
-	this.name = obj.name;
-	this.attack = obj.attack;
-	this.hitpoints = obj.hitpoints;
-	this.totalHitpoints = obj.hitpoints;
-	this.defence = false;
+function Unit(name, attack, hitpoints) {
+	this.name = name;
+	this.attack = attack;
+	this.hitpoints = hitpoints;
+	this.totalHitpoints = hitpoints
 }
 
-Champion.prototype.getHitpoints = function() {
+Unit.prototype.getHitpoints = function() {
 	return this.hitpoints;
 }
 
-Champion.prototype.setHitpoints = function(num) {
+Unit.prototype.setHitpoints = function(num) {
 	this.hitpoints = num;
 }
 
-Champion.prototype.getTotalHitpoints = function() {
+Unit.prototype.getTotalHitpoints = function() {
 	return this.totalHitpoints;
 }
 
-Champion.prototype.setTotalHitpoints = function(num) {
+Unit.prototype.setTotalHitpoints = function(num) {
 	this.totalHitpoints = Math.abs(num);
 }
 
-Champion.prototype.getAttack = function() {
+Unit.prototype.getAttack = function() {
 	return this.attack;
 }
 
-Champion.prototype.setAttack = function(num) {
+Unit.prototype.setAttack = function(num) {
 	this.attack = Math.abs(num);
+}
+
+Unit.prototype.isAlive = function() {
+	if(this.hitpoints > 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+Champion.prototype = Object.create(Unit.prototype);
+Monster.prototype = Object.create(Unit.prototype);
+
+function Champion(obj) {
+	Unit.call(this, obj.name, obj.attack, obj.hitpoints);
+	this.defence = false;
 }
 
 Champion.prototype.fight = function(obj) {
@@ -38,14 +53,6 @@ Champion.prototype.fight = function(obj) {
 		}
 	} else {
 		console.log('You can not attack yourself!');
-	}
-}
-
-Champion.prototype.isAlive = function() {
-	if(this.hitpoints > 0) {
-		return true;
-	} else {
-		return false;
 	}
 }
 
@@ -60,36 +67,9 @@ Champion.prototype.defence = function() {
 }
 
 function Monster(obj) {
-	this.name = obj.name;
-	this.attack = obj.attack;
-	this.hitpoints = obj.hitpoints;
-	this.totalHitpoints = obj.hitpoints;
+	Unit.call(this, obj.name, obj.attack, obj.hitpoints);
 	this.enrage = false;
 	this.count = 0;
-}
-
-Monster.prototype.getHitpoints = function() {
-	return this.hitpoints;
-}
-
-Monster.prototype.setHitpoints = function(num) {
-	this.hitpoints = num;
-}
-
-Monster.prototype.getTotalHitpoints = function() {
-	return this.totalHitpoints;
-}
-
-Monster.prototype.setTotalHitpoints = function(num) {
-	this.totalHitpoints = Math.abs(num);
-}
-
-Monster.prototype.getAttack = function() {
-	return this.attack;
-}
-
-Monster.prototype.setAttack = function(num) {
-	this.attack = Math.abs(num);
 }
 
 Monster.prototype.fight = function(obj) {
@@ -107,14 +87,6 @@ Monster.prototype.fight = function(obj) {
 		}
 	} else {
 		console.log('You can not attack yourself!');
-	}
-}
-
-Monster.prototype.isAlive = function() {
-	if(this.hitpoints > 0) {
-		return true;
-	} else {
-		return false;
 	}
 }
 
